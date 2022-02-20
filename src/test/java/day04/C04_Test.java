@@ -21,6 +21,7 @@ public class C04_Test {
         //amount kismina 500 miktarini giriniz
         //tarih kismina 2023-02-02 giriniz
         //pay butonuna tiklayiniz
+        //The payment was successfully submitted. bu yazinin goruldugunu kontrol ediniz
         //"The payment was successfully submitted." mesajinin goruldugunu kontrol ediniz
 
         WebDriverManager.chromedriver().setup();
@@ -63,8 +64,9 @@ public class C04_Test {
         } else{
             System.out.println("expected succes title ile actual succes title esit degil. Test FAILED");
         }
+
         System.out.println(actualSucces2);
         System.out.println(expectedSucces);
 
-    }
-}
+
+}}
