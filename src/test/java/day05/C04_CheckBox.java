@@ -1,6 +1,7 @@
 package day05;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -14,6 +15,9 @@ public class C04_CheckBox {
     //checkbox1 secili degilse onay kutusunu tiklayin
     //checkbox2 secili degilse onay kutusuna tiklayin
     static WebDriver driver;
+
+    // before ve after class her method dan once calistirilir,
+    // beforeclass ve afterclass ise class baslamadan once ve class bittikten sonra calistirilir
 @Before
 public void setup(){
     WebDriverManager.chromedriver().setup();
@@ -31,7 +35,12 @@ public void test1(){
     }
     if (!checkBox2.isDisplayed()){
         checkBox2.click();
-    }
+    }}
+    @After
+            public void tearDown(){
+    driver.close();
+
+
 
 }
         }
